@@ -1,5 +1,6 @@
 /*Tính tiền phòng
-Viết hàm calculate_room_fee để tính tổng số tiền thuê phòng dựa trên số ngày thuê days và loại phòng type_room.
+Viết hàm calculate_room_fee để tính tổng số tiền thuê phòng 
+dựa trên số ngày thuê days và loại phòng type_room.
 
 Quy ước loại phòng:
 
@@ -17,7 +18,8 @@ Phòng loại B: 200.000 đồng/ngày
 
 Phòng loại C: 150.000 đồng/ngày
 
-Nếu số ngày thuê từ 12 ngày trở lên, áp dụng giảm giá trên tổng tiền phòng:
+Nếu số ngày thuê từ 12 ngày trở lên, áp dụng giảm giá trên 
+tổng tiền phòng:
 
 Phòng loại A: giảm 10%
 
@@ -25,10 +27,13 @@ Phòng loại B: giảm 8%
 
 Phòng loại C: giảm 8%
 
-Hàm trả về tổng số tiền thuê phòng dưới dạng long. Kết quả cuối cùng được làm tròn bằng hàm round.
+Hàm trả về tổng số tiền thuê phòng dưới dạng long. 
+Kết quả cuối cùng được làm tròn bằng hàm round.
 
 Lưu ý
-Mức giảm giá chỉ được áp dụng khi số ngày thuê lớn hơn hoặc bằng 12. Nếu thuê dưới 12 ngày, tính theo đơn giá thông thường và không áp dụng giảm giá.
+Mức giảm giá chỉ được áp dụng khi số ngày thuê lớn hơn 
+hoặc bằng 12. Nếu thuê dưới 12 ngày, tính theo đơn giá 
+thông thường và không áp dụng giảm giá.
 
 For example:
 

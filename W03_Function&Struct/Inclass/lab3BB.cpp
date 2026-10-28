@@ -32,7 +32,8 @@ using namespace std;
 int reverse(int x) {
     int res = 0;
     
-    while (x != 0) {
+    while (x != 0)  //không dùng x>0 để cho số âm cũng chạy được
+    {
         int pop = x % 10;
         x /= 10;
         
@@ -45,18 +46,15 @@ int reverse(int x) {
         
         res = res * 10 + pop;
     }
-    
+    //không để res trước để tránh trường hợp bị tràn số
+    // /10 là vì res còn nhân 10 và cộng pop
     return res;
 }
 
 int main() {
     int x;
-    
-    cout << "Nhap so nguyen x = ";
-    if (cin >> x) {
-        int result = reverse(x);
-        cout << "So dao nguoc: " << result << endl;
-    }
+    cin >> x;
+    cout << reverse(x);
     
     return 0;
 }

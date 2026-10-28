@@ -44,7 +44,7 @@ int main() {
     }
 
     double h1 = 0, h2 = 0, h3 = 0;//h1,h2,h3 là số giờ dùng trong mỗi khung giờ
-    double lo, hi;//lo: mốc bắt đầu, hi: mốc kết thúc
+    double lo, hi;//lo: mốc bắt đầu, hi: mốc kết thúc (không dùng trực tiếp các biến a1,a2,b1,b2 vì nó sẽ giúp không làm thay đổi giá trị gốc ban đầu, vì chương trình chạy tuần tự từ trên xuống)
 
     // ===== Xử lý đoạn 1 (tính số giờ dùng trong mỗi khung giờ, cùng ngày)===== 
     lo = a1; hi = b1;                       // khung 1: [0, 7)
@@ -52,7 +52,7 @@ int main() {
     if (hi > lo) h1 += hi - lo;
 
     lo = a1; hi = b1;                       // khung 2: [7, 17)
-    if (lo < 7) lo = 7;
+    if (lo < 7) lo = 7;                     //không được bỏ lo, hi ở các đoạn sau vì nếu bỏ đi thì nó sẽ dùng giá trị ở đoạn lệnh trước để tính
     if (hi > 17) hi = 17;
     if (hi > lo) h2 += hi - lo;
 

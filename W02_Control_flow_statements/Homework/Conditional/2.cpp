@@ -5,6 +5,29 @@ Chọn ngày tháng năm bất kì
 Input: 12 3 2000
 Output: 1 11 3 2000 13 3 2000
 */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #include <iostream>
 using namespace std;
 

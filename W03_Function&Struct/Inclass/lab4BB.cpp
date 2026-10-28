@@ -55,3 +55,26 @@ int nthDivisibleNumber(int n, int a, int b, int c) {
         x++;
     }
 }
+
+/*#include <iostream>
+using namespace std;
+bool isDivisible (int x,int a,int b,int c){
+    return (x%a==0 || x%b==0 || x%c ==0);
+}
+int nthDivisibleNumber (int n,int a,int b, int c) {
+    int count = 0;
+    int i = 0; //khoong được khởi tạo từ 0 vì 0 luôn chia hết -> count sẽ bị đếm nhầm thành 1
+    for (;count<=n;i++) 
+    // không phải là count<=n MÀ CHỈ ĐƯỢC LÀ COUNT < N VÌ NẾU ĐỂ THÊM DẤU BẰNG NGHĨA LÀ VÒNG LẶP SẼ CHẠY THÊM 1 LẦN NỮA
+    //i++ phải đặt trước khi tính nếu khoong thì khi retrun sẽ bị sai (vì +1 sau đó vòng lặp mới false)
+    {
+        if (isDivisible(i,a,b,c)) count++; //gọi i thì phải truyền i vào isDivisible
+    }
+    return i;
+}
+int main() {
+    int n;
+    cin>>n;
+    cout<<nthDivisible(n);
+    return 0;
+}*/

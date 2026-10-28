@@ -23,7 +23,9 @@ For example:
 Input	Result
 6         1
 */
-bool isUgly(int n) {
+
+
+/*bool isUgly(int n) {
     // Theo quy ước: n <= 0 không phải là Ugly Number
     if (n <= 0) {
         return false;
@@ -46,4 +48,21 @@ bool isUgly(int n) {
     
     // Nếu n rút gọn về 1 thì n là Ugly Number, ngược lại thì không
     return n == 1;
+}*/
+
+#include <iostream>
+using namespace std;
+bool isUgly (int n);
+bool isUgly (int n) {
+    if (n<=0) return false;
+    while (n%2==0) n/=2;
+    while (n%3==0) n/=3;
+    while (n%5==0) n/=5;
+    return n==1; /*if (n == 1)  return true;
+                   else   return false;*/
+} 
+int main () {
+    int n;
+    cin>>n;
+    cout<<isUgly(n);
 }

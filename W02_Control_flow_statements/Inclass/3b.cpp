@@ -11,7 +11,7 @@ Lặp lại quá trình trên cho đến khi n = 0, đồng thời cộng dồn 
 
 Ví dụ
 Input	Result
-1	1
+1	    1
 123456	21
 Với n = 123456:
 

@@ -22,7 +22,7 @@ Input	           Result
 #include <iomanip>
 # define PI 3.14159
 using namespace std;
-int main () {
+int main () { 
     double r,h;
     cin>>r>>h;
     double Sday=PI*r*r;

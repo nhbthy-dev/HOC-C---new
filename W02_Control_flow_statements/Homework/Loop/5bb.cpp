@@ -13,7 +13,7 @@ Sinh viên có thể bắt đầu kiểm tra từ số lớn hơn giữa a và b
 
 Ví dụ
 Input	Result
-3 4	12
+3 4	    12
 Ví dụ với a = 3 và b = 4:
 
 Các bội của 3: 3, 6, 9, 12, ...
@@ -46,6 +46,11 @@ int main() {
     }
 
     cout << lcm << endl;
+    /*cách khác
+    while (lcm % a != 0 || lcm % b != 0) {
+    lcm++;
+}
+cout << lcm;*/
     return 0;
 }
    

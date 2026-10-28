@@ -1,5 +1,6 @@
 /*Dãy số Collatz
-Viết hàm length_collatz_sequence để đếm số bước cần thiết đưa số nguyên dương n về giá trị 1 theo quy tắc Collatz.
+Viết hàm length_collatz_sequence để đếm số bước cần thiết 
+đưa số nguyên dương n về giá trị 1 theo quy tắc Collatz.
 
 Tại mỗi bước:
 
