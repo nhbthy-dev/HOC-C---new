@@ -46,3 +46,47 @@ Input	    Result
         solution.x2 = round_to_decimal((-b - sqrt(delta)) / (2 * a), 3);
     }
     */
+#include <iostream>
+#include <iomanip>
+#include <cmath>
+using namespace std;
+
+struct QuadraticSolution {
+    bool has_solution;
+    double x1, x2;
+};
+
+// Hàm làm tròn (đề đã cung cấp sẵn, ở đây viết lại để chạy độc lập)
+double round_to_decimal(double value, int decimals) {
+    double factor = pow(10, decimals);
+    return round(value * factor) / factor;
+}
+
+QuadraticSolution solve_quadratic(double a, double b, double c) {
+    QuadraticSolution solution;
+    solution.has_solution = false;
+    solution.x1 = 0;
+    solution.x2 = 0;
+
+    double delta = b * b - 4 * a * c;
+
+    if (delta >= 0) {
+        solution.has_solution = true;
+        solution.x1 = round_to_decimal((-b + sqrt(delta)) / (2 * a), 3);
+        solution.x2 = round_to_decimal((-b - sqrt(delta)) / (2 * a), 3);
+    }
+
+    return solution;
+}
+
+int main() {
+    double a, b, c;
+    cin >> a >> b >> c;
+
+    QuadraticSolution s = solve_quadratic(a, b, c);
+
+    cout << s.has_solution << " ";
+    cout << fixed << setprecision(3) << s.x1 << " " << s.x2 << endl;
+
+    return 0;
+}

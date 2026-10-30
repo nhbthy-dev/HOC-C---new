@@ -1,7 +1,10 @@
 /*Kiểm tra số Armstrong
-Viết hàm check_armstrong_number để kiểm tra số nguyên n có phải là số Armstrong hay không.
+Viết hàm check_armstrong_number để kiểm tra số 
+nguyên n có phải là số Armstrong hay không.
 
-Giả sử n có k chữ số. n được gọi là số Armstrong nếu tổng lũy thừa bậc k của từng chữ số bằng chính n.
+Giả sử n có k chữ số. n được gọi là số Armstrong 
+nếu tổng lũy thừa bậc k của từng chữ số bằng 
+chính n.
 
 Ví dụ:
 

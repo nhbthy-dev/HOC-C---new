@@ -7,7 +7,8 @@ Hàm trả về true nếu:
 
 x % a == 0 hoặc x % b == 0 hoặc x % c == 0
 
-Sau đó, sử dụng hàm isDivisible bên trong nthDivisibleNumber để tìm số nguyên dương thứ n chia hết cho ít nhất một trong ba số a, b, c.
+Sau đó, sử dụng hàm isDivisible bên trong nthDivisibleNumber để tìm số nguyên dương thứ n chia hết cho ít nhất 
+một trong ba số a, b, c.
 
 Ví dụ với:
 

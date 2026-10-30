@@ -60,3 +60,56 @@ Input	Result
         solution.status = -1;  // vô nghiệm
     }
 */
+#include <iostream>
+#include <iomanip>
+#include <cmath>
+using namespace std;
+
+struct EquationSolution {
+    int status;
+    double x, y;
+};
+
+// Đề đã cung cấp sẵn, viết lại để chạy độc lập
+double round_to_decimal(double value, int decimals) {
+    double factor = pow(10, decimals);
+    return round(value * factor) / factor;
+}
+
+EquationSolution solve_system_equation(
+    double a, double b, double c,
+    double d, double e, double f
+) {
+    EquationSolution solution;
+    solution.status = 0;
+    solution.x = 0;
+    solution.y = 0;
+
+    double D  = a * e - b * d;
+    double Dx = c * e - b * f;
+    double Dy = a * f - c * d;
+
+    if (D != 0) {
+        solution.status = 1;
+        solution.x = round_to_decimal(Dx / D, 3);
+        solution.y = round_to_decimal(Dy / D, 3);
+    } else if (Dx == 0 && Dy == 0) {
+        solution.status = 0;
+    } else {
+        solution.status = -1;
+    }
+
+    return solution;
+}
+
+int main() {
+    double a, b, c, d, e, f;
+    cin >> a >> b >> c >> d >> e >> f;
+
+    EquationSolution s = solve_system_equation(a, b, c, d, e, f);
+
+    cout << s.status << " ";
+    cout << fixed << setprecision(3) << s.x << " " << s.y << endl;
+
+    return 0;
+}

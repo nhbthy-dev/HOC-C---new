@@ -62,7 +62,5 @@ bool isUgly (int n) {
                    else   return false;*/
 } 
 int main () {
-    int n;
-    cin>>n;
-    cout<<isUgly(n);
+    cout<<isUgly(6)<<endl;
 }
