@@ -1,3 +1,4 @@
+
 /*Tính xấp xỉ lũy thừa cơ số tự nhiên
 Viết chương trình sử dụng các hàm để tính xấp xỉ giá trị ex theo chuỗi:
 

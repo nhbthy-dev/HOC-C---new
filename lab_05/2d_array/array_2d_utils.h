@@ -5,7 +5,12 @@ const int MAX_ROWS = 100;
 const int MAX_COLS = 100;
 
 // TODO
-
+void input_2d(int arr[][MAX_COLS], int rows, int cols);
+void print_2d(int arr[][MAX_COLS], int rows, int cols);
+bool check_exist(int arr[][MAX_COLS], int rows, int cols, int value);
+long long compute_2d(int arr[][MAX_COLS], int rows, int cols, char op = '+');
+float compute_mean_2d(int arr[][MAX_COLS], int rows, int cols);
+int get_max_min_2d(int arr[][MAX_COLS], int rows, int cols, bool max = true);
 // END TODO
 
 #endif

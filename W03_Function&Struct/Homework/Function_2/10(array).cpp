@@ -26,3 +26,40 @@ Result
 7 6 5
 
 */
+#include <iostream>
+#include <string>
+using namespace std;
+
+string spiral_outside_in(int n) {
+    int a[100][100] = {0};
+    int top = 0, bottom = n - 1, left = 0, right = n - 1;
+    int num = 1;
+
+    while (num <= n * n) {
+        for (int j = left; j <= right && num <= n * n; j++) a[top][j] = num++;
+        top++;
+        for (int i = top; i <= bottom && num <= n * n; i++) a[i][right] = num++;
+        right--;
+        for (int j = right; j >= left && num <= n * n; j--) a[bottom][j] = num++;
+        bottom--;
+        for (int i = bottom; i >= top && num <= n * n; i--) a[i][left] = num++;
+        left++;
+    }
+
+    string result = "";
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < n; j++) {
+            result += to_string(a[i][j]);
+            if (j < n - 1) result += " ";
+        }
+        if (i < n - 1) result += "\n";
+    }
+    return result;
+}
+
+int main() {
+    int n;
+    cin >> n;
+    cout << spiral_outside_in(n) << endl;
+    return 0;
+}

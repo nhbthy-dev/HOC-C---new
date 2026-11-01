@@ -42,3 +42,40 @@ double compute_equation(double x, int n) {
     return round_to_decimal(S, 3);
 }
 */
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+// CHỈ để chạy thử trên máy, KHÔNG nộp phần này
+double round_to_decimal(double v) {
+    return (long long)(v * 1000 + (v >= 0 ? 0.5 : -0.5)) / 1000.0;
+}
+
+double exponentiation(double x, int n){
+    double F = 1;
+    for (int i = 1; i<=n;i++) {
+        F*=x;
+    }
+    return F;
+}
+
+double compute_equation(double x, int n){
+    double sum = 1.58;
+    for (int i = 1; i<=n ; i++) {
+        if (i%2!=0) {
+            sum-=exponentiation(x+i,i)/exponentiation(i,2);
+        }
+        else {
+            sum+=exponentiation(x+i,i)/exponentiation(i,2);
+        }
+    }
+    return round_to_decimal(sum);
+}
+
+int main() {
+    double x;
+    int n;
+    cin>> x >> n;
+    cout<< fixed << setprecision(3) << compute_equation(x, n);
+    return 0;
+}
